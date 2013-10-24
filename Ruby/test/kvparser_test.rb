@@ -11,6 +11,7 @@ class KeyValueParserTest < Test::Unit::TestCase
 test1 = This is a test key
 test2 = This is another sentence
 test3 = true
+test4 = This is another test using another = symbol
 
 	# This = should be comment
 
@@ -33,6 +34,7 @@ test4 key = false
 			:test1 => 'This is a test key',
 		  :test2 => 'This is another sentence',
 		  :test3 => 'true',
+      :test4 => 'This is another test using another = symbol',
 			:'123' => '123',
 		  :test4_key => 'false'
 		}
@@ -42,6 +44,7 @@ test4 key = false
 			:test1 => 'This is a test key',
 			:test2 => 'This is another sentence',
 			:test3 => 'true',
+      :test4 => 'This is another test using another = symbol',
 			:'#_This' => 'should be comment',
 			:'123' => '123',
 			:test4_key => 'false'
